@@ -2,8 +2,8 @@
 const fs = require("fs");
 const { Circle, Triangle, Square } = require("./shapes");
 const inquirer = require("inquirer");
-const MaxLengthInputPrompt = require("inquirer-maxLength-input-prompt");
-inquirer.registerPrompt("MaxLength-input", MaxLengthInputPrompt);
+// const MaxLengthInputPrompt = require("inquirer-maxLength-input-prompt");
+// inquirer.registerPrompt("MaxLength-input", MaxLengthInputPrompt);
 
 // const selectShape = (shape) => {
 //   switch(shape){
@@ -21,7 +21,7 @@ inquirer.registerPrompt("MaxLength-input", MaxLengthInputPrompt);
 class CLI {
   run() {
     // TO DO using inquirier create prompts to help render your svg
-    inquirer.registerPrompt("text", MaxLengthInputPrompt)
+    // inquirer.registerPrompt("text", MaxLengthInputPrompt)
     // return inquirer
 
     inquirer.prompt([
