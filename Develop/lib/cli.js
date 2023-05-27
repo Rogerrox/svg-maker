@@ -2,33 +2,18 @@
 const fs = require("fs");
 const { Circle, Triangle, Square } = require("./shapes");
 const inquirer = require("inquirer");
-// const MaxLengthInputPrompt = require("inquirer-maxLength-input-prompt");
-// inquirer.registerPrompt("MaxLength-input", MaxLengthInputPrompt);
 
-// const selectShape = (shape) => {
-//   switch(shape){
-//     case "circle":
-//       return new Circle()
-
-//     case "triangle":
-//       return new Triangle()
-
-//     case "square":
-//         return new Square()
-//   }    
-// }
 
 class CLI {
   run() {
     // TO DO using inquirier create prompts to help render your svg
-    // inquirer.registerPrompt("text", MaxLengthInputPrompt)
-    // return inquirer
+    
 
     inquirer.prompt([
       {
         type: "maxlength-input",
         name: "text",
-        message: "Enter hour SVG name (max 3 characters)",
+        message: "Enter our SVG name (max 3 characters)",
         maxLength: 3
       },
       {
@@ -106,7 +91,7 @@ class CLI {
 
           </svg>`
 
-          fs.writeFile("shape.svg", svgLogo, (err) =>{
+          fs.writeFile("logo.svg", svgLogo, (err) =>{
             err ? console.log(err) : console.log("Success!!!...SVG logo created");
           })
         }
@@ -114,28 +99,6 @@ class CLI {
     };
   }
 
-
-// .then((response)=> {
-//   var {shape, shapeColor, textColor, title} = data;
-
-//   var newSVG = selectShape(shape)
-//   newSVG.setShapeColor(shapeColor)
-//   newSVG.setTextColor(textColor)
-//   newSVG.setText(title)
-  
-
-//   var svgFileData = newSVG.render()
-
-
-//   fs.writeFile("logo.svg", svgFileData, (err)=>{console.log(err)
-//   })
-// })
-
-
-
-//   }
-  
-// }
   // TO DO using your inquirer data use fs to write your svg file
 
 
