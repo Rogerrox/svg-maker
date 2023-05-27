@@ -51,7 +51,9 @@ class CLI {
     ])  
 
     .then((response)=>{
-      var svgLogo;
+      let svgLogo;
+      let makeShape;
+
       switch (response.shapes){
        
        
@@ -60,8 +62,8 @@ class CLI {
           triangle.setColor(response.color)
           triangle.setText(response.text)
           triangle.setTextColor(response.textColor)
-          var makeShape = triangle.render()
-          var svgLogo = `svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+          makeShape = triangle.render()
+          svgLogo = `svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
           ${makeShape}
           <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColor}">${response.text}</text>
@@ -78,8 +80,8 @@ class CLI {
           square.setColor(response.color)
           square.setText(response.text)
           square.setTextColor(response.textColor)
-          var makeShape = square.render()
-          var svgLogo = `svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+          makeShape = square.render()
+          svgLogo = `svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
           ${makeShape}
           <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColor}">${response.text}</text>
@@ -96,8 +98,8 @@ class CLI {
           circle.setColor(response.color)
           circle.setText(response.text)
           circle.setTextColor(response.textColor)
-          var makeShape = circle.render()
-          var svgLogo = `svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+          makeShape = circle.render()
+          svgLogo = `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
 
           ${makeShape}
           <text x="150" y="125" font-size="60" text-anchor="middle" fill="${response.textColor}">${response.text}</text>
